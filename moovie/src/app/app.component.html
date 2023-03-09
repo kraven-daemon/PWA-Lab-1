@@ -1,17 +1,9 @@
-<h1>its a meat, mario</h1>
-<div class="container-fluid py-3">
-  <h1>Angular Progressive Web Application (PWA)</h1>
+<app-navbar></app-navbar>
+<app-header></app-header>
 
-  <div class="row my-5">
-    <div class="col text-end">
-      Status:
-    </div>
-    <div class="col">
-      <span class="badge bg-success" *ngIf="isOnline">Online</span>
-      <span class="badge bg-danger" *ngIf="!isOnline">Offline</span>
-    </div>
-  </div>
-</div>
-
+<main class="container">
+    <app-movie-item *ngFor="let movie of movies" [movie]="movie"></app-movie-item>
+</main>
+<app-footer></app-footer>
 
 <router-outlet></router-outlet>
